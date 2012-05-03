@@ -1,0 +1,52 @@
+﻿.fld1
+	{		
+		height:30px;
+		width:100%;		
+		border-color:#bdc7d8;		
+		border-width:1px;
+	}
+
+.fld1:hover
+	{
+		background-color:#bdc7A8;
+	}
+	
+.fld
+	{
+		width:100%;
+		height:25px;
+	}
+	
+table
+	{
+background-color:#848484;
+		width:100%;
+		margin-left:-5px;
+		vertical-align:center;
+		font-size:10pt;
+		font-family:tahoma;
+		font-style:italic;
+	}
+
+tr
+	{
+		margin-top:10px;
+		padding-top:10px
+	}
+
+td
+	{		
+	
+		border-width:1px;
+		border-style:solid;
+		border-color:grey ;
+		text-align:left;
+		border-bottom:none;
+		border-right:none;
+		border-left:none;
+		padding:4px 0px 5px 0px;			
+	}
+
+	div.ui-datepicker, .ui-datepicker td{
+ font-size:10px;
+}
