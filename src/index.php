@@ -66,11 +66,11 @@ $(function() {
 				<?php
 			         $link = mysql_connect('localhost','root','');
 					 if (!$link)	die('Could not connect to MySQL: ' . mysql_error());
-						if (!mysql_select_db('airport', $link))
-							{		
+					    	if (!mysql_select_db('airport', $link))
+							  {		
 								echo 'Could not select database>';
 								exit;
-							}			
+							  }			
 							mysql_query("SET character_set_results=utf8");
 							mysql_query("SET character_set_client=utf8");
 							mysql_query("SET character_set_connection=utf8");	
@@ -78,7 +78,7 @@ $(function() {
 							$result=mysql_query($sql);
 							while( $row = mysql_fetch_assoc($result) )
 								{
-									if($row['airplane_status']=="Land on" || $row['airplane_status']=="airborne")
+								   if($row['airplane_status']=="Land on" || $row['airplane_status']=="airborne")
 									{
 										echo ' '.$row['airplane_name'].' &nbsp &nbsp'.$row['airplane_direct'].' &nbsp &nbsp'.$row['airplane_position'].' ( '.$row['airplane_status'].' )</br> </br>';
 									}
@@ -129,18 +129,7 @@ $(function() {
 					
 					<!-----MAIN_BOTTOM------------------------------------------->
 					<div id = "main_bottom">
-	
-					<!--<img src="style/image/loading.gif" width="100%" height="100%"/>	-->
 					
-						<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="237" height="112" id="weather" align="middle">
-							<param name="allowScriptAccess" value="always" />
-							<param name="allowFullScreen" value="false" />
-							<param name="wmode" value="transparent" />
-							<param name="movie" value="http://weather.bamdaa.com/weather.v3.swf?province=MGXX0003&bgcolor=0x389AE6:0x0111c0&cornerradius=17&changebgcolor=1&lng=mn" />
-							<param name="quality" value="high" />
-							<embed src="http://weather.bamdaa.com/weather.v3.swf?province=MGXX0003&bgcolor=0x389AE6:0x0111c0&cornerradius=17&changebgcolor=1&lng=mn" quality="high" width="237" height="112" wmode="transparent" name="weather" align="middle" allowScriptAccess="always" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />						
-						</object>
-				
 					</div>
 				</div>
 				
