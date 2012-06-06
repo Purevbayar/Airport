@@ -60,28 +60,11 @@ $(function() {
 			
 				<!-----HEADER_RIGHT--------------------------------------------->
 				<div id = "header_right">					
-					<marquee onmouseout="this.start()" direction="down" align="left" loop="true" onmouseover="this.stop()" scrollamount="3" >
+					<marquee onMouseOut="this.start()" direction="down" align="left" loop="true" onMouseOver="this.stop()" scrollamount="3" >
 
 
 				<?php
-			         $link = mysql_connect('localhost','root','');
-					 if (!$link)	die('Could not connect to MySQL: ' . mysql_error());
-<<<<<<< HEAD
-					    	if (!mysql_select_db('airport', $link))
-							  {		
-								echo 'Could not select database>';
-								exit;
-							  }			
-=======
-						if (!mysql_select_db('airport', $link))
-							{		
-								echo 'Could not select database>';
-								exit;
-							}			
->>>>>>> 7b765e7714afd1d6fec5d2e185b7da633ffa0219
-							mysql_query("SET character_set_results=utf8");
-							mysql_query("SET character_set_client=utf8");
-							mysql_query("SET character_set_connection=utf8");	
+			         include ("connect.php");	
 							$sql="select* from airplane";
 							$result=mysql_query($sql);
 							while( $row = mysql_fetch_assoc($result) )

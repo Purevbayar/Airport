@@ -9,17 +9,8 @@ if(isset($_POST['submit']))
 		       { $errors .= "error";	}
 		else
 		{		
-			$link = mysql_connect('localhost','root',''); 	
-			if (!$link)	die('Could not connect to MySQL: ' . mysql_error());
-			     if (!mysql_select_db('airport', $link))
-			    {		
-				   echo 'Could not select database>';
-				   exit;
-			    }
-				mysql_query("SET character_set_results=utf8");
-				mysql_query("SET character_set_client=utf8");
-				mysql_query("SET character_set_connection=utf8");		
-				mysql_query("INSERT INTO userinfo (	
+			include ("connect.php");				
+			mysql_query("INSERT INTO userinfo (	
 				user_firstname, user_lastname, 
 				user_loginname, user_password, 
 				user_registernumber, user_email, 
